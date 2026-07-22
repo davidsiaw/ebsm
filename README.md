@@ -1,4 +1,4 @@
-# Ebsm
+# ebsm
 
 Ebsm is a **literate binary generator**. You write a text file that mixes prose, Ruby scripting, and byte data; `ebsm` evaluates the scripting and compiles the data lines into raw bytes.
 
