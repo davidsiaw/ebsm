@@ -1,0 +1,5 @@
+--no-private
+--markup markdown
+--title "Ebsm Documentation"
+--readme README.md
+--files spec/e2e/*.md

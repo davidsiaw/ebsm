@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'ebsm'
+require 'bsm'
+
+# When set, print the expanded bsm2 literate text (the output of
+# Ebsm::Renderer#render) instead of compiling it to binary. Useful for
+# debugging ebsm scripting: you see exactly what the templating produced
+# before bsm2 turns it into bytes.
+output_bsm2 = ARGV.delete('--bsm') || ARGV.delete('-b')
+
+content = ARGF.read
+
+begin
+  expanded = Ebsm::Renderer.new.render(content)
+  if output_bsm2
+    print expanded
+  else
+    print Ebsm::Renderer.new.bsm2_evaluate(content)
+  end
+rescue Ebsm::Error => e
+  warn e.format
+  exit 1
+end
