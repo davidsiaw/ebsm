@@ -4,6 +4,10 @@ Ebsm is a **literate binary generator**. You write a text file that mixes prose,
 
 It is a templating layer over [bsm](https://github.com/davidsiaw/bsm), a literate binary format where a line is data **only** if it starts with `;`.
 
+## Documentation
+
+Detailed documentation is here: https://davidsiaw.github.io/ebsm/
+
 ## Literate Language
 
 Ebsm deliberately steals the two most common comment markers in programming
@@ -41,6 +45,8 @@ Anything else is a comment, ignored.
 ## Example Usage
 
 This is an example of how to use ebsm.
+
+More usage examples here: https://davidsiaw.github.io/ebsm/file.arm.html
 
 ```ebsm
 file: arm.ebsm
@@ -117,10 +123,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install ebsm
-
-## Documentation
-
-Detailed documentation is here: https://davidsiaw.github.io/ebsm/
 
 ## Development
 
