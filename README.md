@@ -82,7 +82,9 @@ Run it:
 
 ## Debugging
 
-Pass `--bsm` (or `-b`) to print the expanded bsm2 literate text instead of compiling it to binary. This shows exactly what the templating produced -- the `; ` data lines after `#` scripting and `[...]` interpolation -- which is handy for debugging your ebsm code:
+Pass `--bsm` (or `-b`) to print the expanded bsm2 literate text instead of compiling it to binary. This shows exactly what the templating produced.
+
+The `; ` data lines after `#` scripting and `[...]` interpolation is handy for debugging your ebsm code:
 
     $ echo '; [le32 0x12345678] 41 "ok"' | bundle exec ruby exe/ebsm --bsm
     ; 78 56 34 12 41 "ok"
