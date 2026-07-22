@@ -91,23 +91,23 @@ The `; ` data lines after `#` scripting and `[...]` interpolation is handy for d
 
 ## EBSM methods
 
-`Ebsm::Dsl` provides endian helpers for use inside the square brackets `[...]`. Each returns space-separated hex byte pairs and raises `Ebsm::Error` on overflow or non-Integer input.
+`Ebsm::Dsl` provides endian helpers for use inside the square brackets `[...]`. Each returns space-separated hex byte pairs and raises `Ebsm::Error` on overflow or unexpected input.
 
-| helper   | width | endianness   |
-|----------|-------|--------------|
-| `byte`   | 1     | --           |
-| `bytes`  | many  | --           |
-| `repeat` | many  | --           |
-| `le16`   | 2     | little       |
-| `be16`   | 2     | big          |
-| `le32`   | 4     | little       |
-| `be32`   | 4     | big          |
-| `le64`   | 8     | little       |
-| `be64`   | 8     | big          |
-| `lef32`  | 4     | little (f32) |
-| `bef32`  | 4     | big (f32)    |
-| `lef64`  | 8     | little (f64) |
-| `bef64`  | 8     | big (f64)    |
+| helper   | width | takes a                       |
+|----------|-------|-------------------------------|
+| `byte`   | 1     | integer between 0 - 255       |
+| `bytes`  | many  | array of bytes                |
+| `repeat` | many  | a byte a number of times      |
+| `le16`   | 2     | little endian 16 bit int      |
+| `be16`   | 2     | big endian 16 bit int         |
+| `le32`   | 4     | little endian 32 bit int      |
+| `be32`   | 4     | big endian 32 bit int         |
+| `le64`   | 8     | little endian 64 bit int      |
+| `be64`   | 8     | big endian 64 bit int         |
+| `lef32`  | 4     | little endian 32 bit float    |
+| `bef32`  | 4     | big endian 32 bit float       |
+| `lef64`  | 8     | little endian 64 bit float    |
+| `bef64`  | 8     | big endian 64 bit float       |
 
 
 ## Installation
