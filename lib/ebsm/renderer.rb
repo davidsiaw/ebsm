@@ -57,7 +57,7 @@ module Ebsm
       content.lines.each_with_index.map do |line, index|
         stripped = line.chomp
         if stripped.start_with?('#')
-          "<% #{stripped[1..]} -%>\n"
+          "<% #{stripped[1..] || ''} -%>\n"
         elsif stripped.start_with?(';')
           "<%= line(#{index + 1}) { #{expand_brackets(stripped, index + 1)} } %>\n"
         else

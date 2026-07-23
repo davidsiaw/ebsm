@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['David Siaw']
   spec.email         = ['874280+davidsiaw@users.noreply.github.com']
 
-  spec.summary       = 'Ebsm gem'
-  spec.description   = 'Does not do anything'
+  spec.summary       = 'Literate binary generator'
+  spec.description   = 'A templating layer over bsm2 that lets you mix prose, Ruby scripting, and byte data in one source file.'
   spec.homepage      = 'https://github.com/davidsiaw/ebsm'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 3.0')

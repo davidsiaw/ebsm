@@ -13,11 +13,11 @@ output_bsm2 = ARGV.delete('--bsm') || ARGV.delete('-b')
 content = ARGF.read
 
 begin
-  expanded = Ebsm::Renderer.new.render(content)
+  renderer = Ebsm::Renderer.new
   if output_bsm2
-    print expanded
+    print renderer.render(content)
   else
-    print Ebsm::Renderer.new.bsm2_evaluate(content)
+    print renderer.bsm2_evaluate(content)
   end
 rescue Ebsm::Error => e
   warn e.format
